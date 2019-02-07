@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<meta charset="utf-8" />
+	<title><?= $title ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset utf="8">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/insertcoin.css" media="screen">
+	<link href="css/bootstrap4.min.css" rel="stylesheet">
+ 
+	<link href="css/animate.min.css" rel="stylesheet">
+
+	<link href="css/toastr.min.css" rel="stylesheet">
+	<link href="css/style.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/apps.min.js"></script>		
+	<style>
+	body {
+	  background-color: #cfedfc !important;
+	  background-image: url("images/bg.jpg");
+	  background-size: cover;
+	  background-position: center center; 
+	  margin:auto;
+	  text-align: center;
+	}
+	a:hover{
+	  text-decoration: none !important;
+	}
+	.button-rnd {
+	  min-width: 300px !important;
+	  max-width: 300px !important;
+	}
+	.button-rnd:hover{
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.footer {
+	  font-size:90%;
+	  color:#748c8a;
+	}
+	.footer a{
+	  margin-left:3px;
+	}
+	.button-animate {
+
+	  -webkit-animation: glowing 1500ms infinite;
+	  -moz-animation: glowing 1500ms infinite;
+	  -o-animation: glowing 1500ms infinite;
+	  animation: glowing 1500ms infinite;
+	}
+	@-webkit-keyframes glowing {
+	  0% { box-shadow: 0 0 3px #80c780; background-color: #4cae4c;}
+	  50% { box-shadow: 0 0 40px #6ec06e; background-color: #449d44; }
+	  100% { box-shadow: 0 0 3px #5cb85c; background-color: #4cae4c;}
+	}
+
+	@-moz-keyframes glowing {
+	  0% { box-shadow: 0 0 3px #80c780; background-color: #4cae4c;}
+	  50% { box-shadow: 0 0 40px #6ec06e; background-color: #449d44; }
+	  100% { box-shadow: 0 0 3px #5cb85c; background-color: #4cae4c;}
+	}
+
+	@-o-keyframes glowing {
+	  0% { box-shadow: 0 0 3px #80c780; background-color: #4cae4c;}
+	  50% { box-shadow: 0 0 40px #6ec06e; background-color: #449d44; }
+	  100% { box-shadow: 0 0 3px #5cb85c; background-color: #4cae4c;}
+	}
+
+	@keyframes glowing {
+	  0% { box-shadow: 0 0 3px #80c780; background-color: #4cae4c;}
+	  50% { box-shadow: 0 0 40px #6ec06e; background-color: #449d44; }
+	  100% { box-shadow: 0 0 3px #5cb85c; background-color: #4cae4c;}
+	}
+	</style>
+	</head>
+
+	<body class='insertcoin'>
+
+
+
+	<div class="vertical-form">
+	<div style="margin:0;padding:0;display:inline"></div>
+	<legend>
+		<!--START animated coin slot-->
+		<div style="background-image: url('images/coin-slot.png');width:220px;height: 220px;background-size:cover;padding:0px;margin:auto">
+			<img src="images/coinslot-coins-only.gif" width="220px" />
+		</div>
+		<!--END animated coin slot-->
+	</legend>
+
+
+	<!--Toast-->
+    <div align="center">
+	<p> TOTAL AMOUNT :
+	<span id="tamount">0.00 <br>	</p> 
+	<p> TOTAL TIME :
+	<span id="ttime"> --  	</p> 
+	<div class="progress progress-rounded progress-lg progress-striped active">
+	<div id="progressBar" class="progress-bar progress-bar-danger" style="width:70%"></div> 
+	</div>
+	<div id="progress-msg" class="text-center text-white" style="margin-top:-25px;">	</div> 
+	<div style="clear: both; height:15px;"></div>
+	<div id="transcoins">		
+	
+  
+	</div>
+	</div>       
+	<a href="<?= $done ?>"><button style="font-size: 180%;margin-bottom:20px;font-weight: normal;padding:10px;border-radius:20px;" name="submit" class="btn btn-success button-animate button-rnd" type="submit" >Start Internet</button> </a>
+
+	
+
+ 	<footer class="footer" style="margin-top:100px;margin-bottom:-20px;max-width: 500px">
+	Powered By: <a href="http://www.pmpw.tech" target="_blank" >PMPW Tech</a>
+
+	    <div class="text-left" style="font-size:80%;">
+	      <div class="row">
+	        <div class="col-md-6">
+	          <i class="fa fa-file-o"></i> <a id="policy_view" href="#" data-toggle="modal" data-target="#policy">Terms of Service</a> <br>
+	          <i class="fa fa-facebook-f"></i> <a href="http://facebook.com/pmpw.tech" target="_blank">facebook.com/pmpw.tech</a> <br>
+	          <i class="fa fa-phone-square"></i> 0995 282 6560 <br>
+	        </div>
+
+	        <div class="col-md-6">
+	          <i class="fa fa-at"></i> pmpw.tech@gmail.com <br>
+	          <i class="fa fa-map-marker"></i> Cebu City, Cebu 
+	        </div>
+	      </div>
+	   
+	    
+	    </div>
+
+	</footer>
+	</div>
+
+    <script src="js/jquery-migrate-1.1.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap4.min.js"></script>
+
+		
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/soundjs.min.js"></script>
+    <script type="text/javascript" src="js/preloadjs.min.js"></script>
+    <script src="js/toastr.min.js"></script>
+
+
+      <!--//footer-->
+	  
+	  
+	</body>
+</html>
