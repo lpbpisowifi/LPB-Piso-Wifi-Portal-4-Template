@@ -344,7 +344,7 @@
 
       <input type="text" class="form-control" name="vcode" id="vcode" value="" aria-describedby="errormsg" placeholder="Enter Voucher here...">
       <div class="input-group-append">
-        <button name="submit" type="submit" id="btn-vcode" class="btn btn-primary btn-spinner">Submit</button>
+        <button name="submit" type="submit" id="btn-vcode" class="btn btn-primary">Submit</button>
       </div>
     </div>
   </form>
