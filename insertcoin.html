@@ -28,6 +28,11 @@
 	  margin:auto;
 	  text-align: center;
 	}
+	.vertical-form {
+		padding-left:15px;
+	  	padding-right:15px;
+	}
+	a {color:#428bca !important;}
 	a:hover{
 	  text-decoration: none !important;
 	}
@@ -102,18 +107,18 @@
 	<div class="progress progress-rounded progress-lg progress-striped active">
 	<div id="progressBar" class="progress-bar progress-bar-danger" style="width:70%"></div> 
 	</div>
-	<div id="progress-msg" class="text-center text-white" style="margin-top:-25px;">	</div> 
-	<div style="clear: both; height:15px;"></div>
+	<div id="progress-msg" class="text-center text-white" style="margin-top:-25px;">  </div> 
+	<div style="clear: both; height:60px;"></div>
 	<div id="transcoins">		
 	
   
 	</div>
 	</div>       
-	<a href="<?= $done ?>"><button style="font-size: 180%;margin-bottom:20px;font-weight: normal;padding:10px;border-radius:20px;" name="submit" class="btn btn-success button-animate button-rnd" type="submit" >Start Internet</button> </a>
+	<a title="Click to Start Using the Internet" href="<?= $done ?>"><button style="font-size: 180%;margin-bottom:20px;font-weight: normal;padding:10px;border-radius:20px;" name="submit" class="btn btn-success button-animate button-rnd btn-spinner" type="submit" >Start Internet</button> </a>
 
 	
 
- 	<footer class="footer" style="margin-top:100px;margin-bottom:-20px;max-width: 500px">
+ 	<footer class="footer" style="margin:auto;max-width: 500px;position: relative;">
 	Powered By: <a href="http://www.pmpw.tech" target="_blank" >PMPW Tech</a>
 
 	    <div class="text-left" style="font-size:80%;">
@@ -147,7 +152,22 @@
     <script type="text/javascript" src="js/preloadjs.min.js"></script>
     <script src="js/toastr.min.js"></script>
 
-
+	 <script>
+	 	window.history.pushState(null, "", window.location.href);        
+        window.onpopstate = function() {
+            window.history.pushState(null, "", window.location.href);
+            alert("If you want to cancel, please click the Start Internet button.");
+        };
+        $(document).ready(function() {
+        	// add spinner and disable button when click
+		  $(".btn-spinner").on('click', function(e) {
+		    //e.preventDefault();
+		    $(".btn-spinner").attr("disabled", "disabled");
+		    //$(".btn-no-spinner").attr("disabled", false);
+		    $(this).prepend('<i class="fa fa-spinner fa-spin"></i> ');
+		  });
+		});  
+	 </script>
       <!--//footer-->
 	  
 	  
